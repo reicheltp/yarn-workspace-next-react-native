@@ -1,16 +1,20 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/**"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-scripts",
+      "**/react-native-scripts/**"
+    ]
+  },
   "scripts": {
     "dev": "yarn --cwd packages/app dev",
     "precommit": "pretty-quick --staged"
   },
-  "nohoist": [
-    "**/react-native",
-    "**/react-native/**"
-  ],
   "devDependencies": {
     "husky": "^0.14.3",
     "prettier": "^1.14.2",

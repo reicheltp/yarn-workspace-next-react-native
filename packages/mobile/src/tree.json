@@ -1,0 +1,376 @@
+{
+  "data": {
+    "app": {
+      "id": "urn:vlek:projects:my-event-app:apps:default",
+      "pages": [
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:home",
+          "display": "Home",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:home:elements:ZQNL7kDmg",
+            "type": "vlek/page",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:home:elements:ZQHYnzvmRz",
+                "type": "vlek/header",
+                "props": {
+                  "image": "urn:vlek:projects:my-event-app:assets:SkhzaRkzX",
+                  "backgroundColor": "bind:styles@primary-color"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:home:elements:WwHYnkvigZ",
+                "type": "vlek/simple-data-list",
+                "props": {
+                  "targetLink": "bind:pages@artist-detail",
+                  "useGrid": true,
+                  "image": "bind:@entries.cover",
+                  "roundedCorner": true,
+                  "dataSource": "urn:vlek:projects:my-event-app:data:bands",
+                  "secondary": "bind:@entries.slogan",
+                  "primary": "bind:@entries.name"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:home:elements:SJnh4RwMX",
+                "type": "vlek/text",
+                "props": {}
+              }
+            ],
+            "props": {
+              "order": {
+                "urn:vlek:projects:my-event-app:apps:default:pages:home:elements:WwHYnkvigZ": 1
+              },
+              "header": "urn:vlek:projects:my-event-app:apps:default:pages:home:elements:ZQHYnzvmRz"
+            }
+          },
+          "props": {
+            "prevent-delete": true
+          }
+        },
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu",
+          "display": "Menu",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:WwvY7kDig",
+            "type": "vlek/drawer",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:WwDL7kviRz",
+                "type": "vlek/image",
+                "props": {
+                  "url": "urn:vlek:projects:my-event-app:assets:SkhzaRkzX",
+                  "height": 69
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:ZQvL7zviRm",
+                "type": "vlek/button",
+                "props": {
+                  "targetLink": "bind:pages@home",
+                  "style": "bind:styles@menu-button",
+                  "title": "Artists"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:WwvYnzDmRZ",
+                "type": "vlek/button",
+                "props": {
+                  "targetLink": "bind:pages@map",
+                  "style": "bind:styles@menu-button",
+                  "title": "Map"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:ZwvYnzvmRM",
+                "type": "vlek/button",
+                "props": {
+                  "targetLink": "bind:pages@news",
+                  "style": "bind:styles@menu-button",
+                  "title": "News"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:ZQvY7zvig7",
+                "type": "vlek/button",
+                "props": {
+                  "targetLink": "bind:pages@about",
+                  "style": "bind:styles@menu-button",
+                  "title": "About"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:rJllE2fzm",
+                "type": "vlek/map",
+                "props": {}
+              }
+            ],
+            "props": {
+              "order": {
+                "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:WwDL7kviRz": 1,
+                "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:ZQvL7zviRm": 2,
+                "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:WwvYnzDmRZ": 3,
+                "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:ZwvYnzvmRM": 4,
+                "urn:vlek:projects:my-event-app:apps:default:pages:menu:elements:ZQvY7zvig7": 5
+              },
+              "backgroundColor": "bind:styles@primary-color",
+              "backgroundImage": "urn:vlek:projects:my-event-app:assets:HJx7pA1G7"
+            }
+          },
+          "props": {
+            "prevent-delete": true
+          }
+        },
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail",
+          "display": "Artist Details",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:aJdYnzvig",
+            "type": "vlek/page",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:aJdYnkDmRF",
+                "type": "vlek/image-header",
+                "props": {
+                  "alignment": "left",
+                  "image": "bind:@entries.cover",
+                  "height": 332,
+                  "title": "bind:@entries.name"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:a1OLnzviRM",
+                "type": "vlek/text",
+                "props": {
+                  "content": "bind:@entries.description"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:a1dYnzDiRV",
+                "type": "vlek/image",
+                "props": {
+                  "url": "urn:vlek:projects:my-event-app:assets:S1IQ6A1Mm",
+                  "roundedCorner": true
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:aJdLnkDigI",
+                "type": "vlek/text",
+                "props": {
+                  "content": "bind:@entries.description"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:a1dL7zviRN",
+                "type": "vlek/button",
+                "props": {
+                  "title": "Follow Us"
+                }
+              }
+            ],
+            "props": {
+              "order": {
+                "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:a1OLnzviRM": 1,
+                "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:a1dYnzDiRV": 2,
+                "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:aJdLnkDigI": 3,
+                "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:a1dL7zviRN": 4
+              },
+              "header": "urn:vlek:projects:my-event-app:apps:default:pages:artist-detail:elements:aJdYnkDmRF"
+            }
+          },
+          "props": {
+            "data-id": "urn:vlek:projects:my-event-app:data:bands",
+            "prevent-delete": true
+          }
+        },
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:map",
+          "display": "Map",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:map:elements:xjdLnkvig",
+            "type": "vlek/page",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:map:elements:xCdY7kDiRz",
+                "type": "vlek/header",
+                "props": {
+                  "backgroundColor": "bind:styles@primary-color",
+                  "title": "Map"
+                }
+              }
+            ],
+            "props": {
+              "showsUserLocation": true,
+              "header": "urn:vlek:projects:my-event-app:apps:default:pages:map:elements:xCdY7kDiRz",
+              "layout": "vlek/map",
+              "accentColor": "bind:styles@primary-color"
+            }
+          },
+          "props": {
+            "prevent-delete": true
+          }
+        },
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:news",
+          "display": "News",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:news:elements:vMKY7zviR",
+            "type": "vlek/page",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:news:elements:vMFL7kvmRz",
+                "type": "vlek/header",
+                "props": {
+                  "backgroundColor": "bind:styles@primary-color",
+                  "title": "News"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:news:elements:vMFY7zDigZ",
+                "type": "vlek/simple-data-list",
+                "props": {
+                  "targetLink": "bind:pages@news-detail",
+                  "image": "bind:@entries.image",
+                  "dataSource": "urn:vlek:projects:my-event-app:data:news",
+                  "primary": "bind:@entries.headline"
+                }
+              }
+            ],
+            "props": {
+              "order": {},
+              "header": "urn:vlek:projects:my-event-app:apps:default:pages:news:elements:vMFL7kvmRz"
+            }
+          },
+          "props": {
+            "prevent-delete": true
+          }
+        },
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:news-detail",
+          "display": "News Detail",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:news-detail:elements:ucFLnkDiR",
+            "type": "vlek/page",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:news-detail:elements:X5FL7zvmRZ",
+                "type": "vlek/header",
+                "props": {
+                  "backgroundColor": "bind:styles@primary-color",
+                  "title": "bind:@entries.headline"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:news-detail:elements:ucKYnkDigz",
+                "type": "vlek/image",
+                "props": {
+                  "url": "bind:@entries.image",
+                  "roundedCorner": true
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:news-detail:elements:X5FY7kDmRm",
+                "type": "vlek/text",
+                "props": {
+                  "content": "bind:@entries.text"
+                }
+              }
+            ],
+            "props": {
+              "order": {
+                "urn:vlek:projects:my-event-app:apps:default:pages:news-detail:elements:ucKYnkDigz": 1,
+                "urn:vlek:projects:my-event-app:apps:default:pages:news-detail:elements:X5FY7kDmRm": 2
+              },
+              "header": "urn:vlek:projects:my-event-app:apps:default:pages:news-detail:elements:X5FL7zvmRZ"
+            }
+          },
+          "props": {
+            "data-id": "urn:vlek:projects:my-event-app:data:news",
+            "prevent-delete": true
+          }
+        },
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:about",
+          "display": "About",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:about:elements:NEKLnkDmg",
+            "type": "vlek/page",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:about:elements:NPFYnzDmRz",
+                "type": "vlek/header",
+                "props": {
+                  "backgroundColor": "bind:styles@primary-color",
+                  "title": "About"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:about:elements:NEFY7kvigZ",
+                "type": "vlek/image",
+                "props": {
+                  "url": "urn:vlek:projects:my-event-app:assets:HkWnG6RyM7"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:about:elements:NPFY7kDmgM",
+                "type": "vlek/text",
+                "props": {
+                  "content": "# VLEK FESTIVAL 2018\n\n_Duo id omnes dolore abhorreant, eirmod antiopam pri no, ei eum nihil salutatus. Suas legimus tacimates has ne. Adhuc choro nostrum vix id, nulla scriptorem eu eos, vim semper platonem ut. His cu sonet utroque, assum discere ius ea. At vis falli nullam ullamcorper._\n\n​\n\nMazim constituam vim ea, id sea reque expetenda. Ferri decore assentior te duo, tale illum regione at has. Ad vis erat dolor latine. Ut aperiam honestatis neglegentur qui."
+                }
+              }
+            ],
+            "props": {
+              "order": {},
+              "header": "urn:vlek:projects:my-event-app:apps:default:pages:about:elements:NPFYnzDmRz"
+            }
+          },
+          "props": {
+            "prevent-delete": true
+          }
+        },
+        {
+          "id": "urn:vlek:projects:my-event-app:apps:default:pages:test-page",
+          "display": "Test Page",
+          "root": {
+            "id": "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:USzCliDig",
+            "type": "vlek/page",
+            "children": [
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:SkmQAnxGQ",
+                "type": "vlek/button",
+                "props": {
+                  "title": "Hallo World 123"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:B1L7R2xMX",
+                "type": "vlek/image",
+                "props": {}
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:S1z4AheGX",
+                "type": "vlek/text",
+                "props": {
+                  "content": "Hallo World"
+                }
+              },
+              {
+                "id": "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:H1IP3K7zX",
+                "type": "vlek/map",
+                "props": {}
+              }
+            ],
+            "props": {
+              "order": {
+                "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:B1L7R2xMX": 1,
+                "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:SkmQAnxGQ": 2,
+                "urn:vlek:projects:my-event-app:apps:default:pages:test-page:elements:S1z4AheGX": 3
+              }
+            }
+          },
+          "props": {}
+        }
+      ]
+    }
+  }
+}
