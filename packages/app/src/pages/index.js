@@ -1,4 +1,4 @@
-import { Demo } from '@vlek/plugins'
+import { Demo } from '@vlek/plugins/Native'
 import React from 'react'
 import { Text, View } from 'react-native'
 
